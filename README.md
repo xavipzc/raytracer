@@ -25,8 +25,8 @@ This is an interfaced ray tracer engine on MAC OSX Platform (we may support linu
 
 ## Dependencies
 
-Latest CUDA Toolkit
-SDL2
+Latest CUDA Toolkit, 
+SDL2, 
 LibXML2
 
 * You could simply use brew to install dependencies (except CUDA Toolkit) : brew install sdl2, brew install libxml2.
