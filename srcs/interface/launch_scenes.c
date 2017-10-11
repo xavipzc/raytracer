@@ -6,7 +6,7 @@
 /*   By: xpouzenc <xpouzenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 13:54:11 by xpouzenc          #+#    #+#             */
-/*   Updated: 2017/10/03 14:27:43 by xpouzenc         ###   ########.fr       */
+/*   Updated: 2017/10/11 17:56:14 by xpouzenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static void	launch_scene_select(t_world *world, int i)
 void		press_launch(struct nk_context *ctx, t_world *world,\
 						int img_active[5])
 {
-	if (nk_button_label(ctx, "Launch"))
+	if (nk_button_label(ctx, "Launch") && world->render_factor == 1)
 	{
 		if (img_active[2] == 1)
 			launch_scene_select(world, 1);
@@ -97,7 +97,7 @@ int			launch_xml_file(struct nk_context *ctx, t_world *world, char *xml)
 {
 	char	*path;
 
-	if (nk_button_label(ctx, "Launch"))
+	if (nk_button_label(ctx, "Launch") && world->render_factor == 1)
 	{
 		path = ft_strjoin("testfiles/", xml);
 		if (parser_checker(path))

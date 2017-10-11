@@ -6,7 +6,7 @@
 /*   By: xpouzenc <xpouzenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/24 21:10:35 by aanzieu           #+#    #+#             */
-/*   Updated: 2017/10/03 14:52:26 by xpouzenc         ###   ########.fr       */
+/*   Updated: 2017/10/11 17:56:28 by xpouzenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ static void	file_open(struct nk_context *ctx, struct media *media,\
 			"Open your file", NK_TEXT_RIGHT))
 			img_active[4] = 1;
 		if (nk_menu_item_image_label(ctx, media->icons.default_file,\
-			"New file", NK_TEXT_RIGHT) && parser_checker("scenes/new.xml"))
+			"New file", NK_TEXT_RIGHT) && parser_checker("scenes/new.xml")\
+			&& world->render_factor == 1)
 		{
 			clear_world(world);
 			parse_rtv1(world, "scenes/new.xml");
